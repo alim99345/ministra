@@ -6,7 +6,7 @@ apt-get update -y
 apt-get upgrade -y
 apt-get install net-tools -y 
 
-VERSION="5.6.8"
+VERSION="4.9.35"
 TIME_ZONE="Europe/Amsterdam" #
 mysql_root_password="test123456"
 repository="https://manner-rising-st-voting.trycloudflare.com/stalker"
@@ -89,9 +89,8 @@ service mysql restart
 echo -e " \e[32mInstalling Stalker Portal $VERSION \e[0m"
 sleep 3
 cd /var/www/html/
-wget https://manner-rising-st-voting.trycloudflare.com/stalker/ministra-5.6.8.zip
-unzip ministra-5.6.8.zip
-mv ministra-5.6.8 stalker_portal
+wget https://manner-rising-st-voting.trycloudflare.com/stalker/stalker_portal_4.9.35.zip
+unzip stalker_portal_4.9.35.zip
 rm -rf *.zip
 
 #Patch Support MAG420/MAG322/MAG324 ON THE PORTAL VERSION 4.9.X
